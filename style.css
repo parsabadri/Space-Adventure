@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #02022f;
+  font-family: Arial, sans-serif;
+  background-image: url("./Assets/2029165.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.game-title {
+  color: #2626b7;
+}
+
+canvas {
+  border: 2px solid white;
+}
+
+#game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#start-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: #0056b3;
+}
+
+#score {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Style the scoreboard */
+#scoreboard {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  color: white;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#scoreboard li {
+  background-color: #222;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Desktop layout: Move scoreboard to the left */
+@media (min-width: 768px) {
+  #game-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #game-info {
+    margin-left: 20px;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile Layout: Adjust canvas and button size */
+@media (max-width: 767px) {
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  #start-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  #score {
+    font-size: 20px;
+  }
+
+  #game-info {
+    width: 100%;
+    text-align: center;
+  }
+}
